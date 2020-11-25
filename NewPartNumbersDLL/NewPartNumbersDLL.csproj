@@ -120,6 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdatePartNumberEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdatePartPriceEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdatePartPriceEntry.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -280,6 +285,17 @@
     </None>
     <None Include="UpdatePartNumberEntry.xss">
       <DependentUpon>UpdatePartNumberEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePartPriceEntry.xsc">
+      <DependentUpon>UpdatePartPriceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePartPriceEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdatePartPriceEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdatePartPriceEntry.xss">
+      <DependentUpon>UpdatePartPriceEntry.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

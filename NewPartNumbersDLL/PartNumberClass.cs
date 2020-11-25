@@ -51,6 +51,26 @@ namespace NewPartNumbersDLL
 
         UpdatePartNumberEntryTableAdapters.QueriesTableAdapter aUpdatePartNumberTableAdapter;
 
+        UpdatePartPriceEntryTableAdapters.QueriesTableAdapter aUpdatePartPriceTableAdapter;
+
+        public bool UpdatePricePrice(int intPartID, double douPrice)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdatePartPriceTableAdapter = new UpdatePartPriceEntryTableAdapters.QueriesTableAdapter();
+                aUpdatePartPriceTableAdapter.UpdatePartPrice(intPartID, douPrice);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Part Number Class // Update Price Price " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public bool UpdatePartNumber(int intPartID, string strPartNumber)
         {
             bool blnFatalError = false;
